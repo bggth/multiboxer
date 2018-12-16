@@ -1,0 +1,246 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SELECT DIALOGEX 0, 0, 172, 153
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Привязка окна"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "ОК",IDOK,60,132,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,115,132,50,14
+    GROUPBOX        "Список окон:",IDC_STATIC,6,6,162,120
+    LISTBOX         IDC_BOXLIST,12,18,150,102,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_MAIN DIALOGEX 0, 0, 346, 238
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Тест клавиш...",IDC_GETKEY,12,216,56,15
+    PUSHBUTTON      "Настройка...",IDC_SETTINGS,75,216,58,15
+    PUSHBUTTON      "Помощь...",IDC_HELP,140,216,56,15
+    PUSHBUTTON      "config.ini",IDC_EDIT,202,216,56,15
+    PUSHBUTTON      "Выход",IDCANCEL,276,216,56,15
+    CONTROL         "",IDC_ACTIONLIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER,12,18,324,186
+    GROUPBOX        "Список действий:",IDC_STATIC,6,6,336,204
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 280, 192
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Настройка"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "ОК",IDOK,138,170,57,15
+    PUSHBUTTON      "Отмена",IDCANCEL,204,170,57,15
+    GROUPBOX        "Метод управления окнами",IDC_STATIC,12,13,258,42
+    COMBOBOX        IDC_METHODCB,24,31,234,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Звуки",IDC_STATIC,12,60,258,42
+    CONTROL         "Проигрывать звук при включении и выключения таймера",IDC_SOUNDCB,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,78,214,10
+    GROUPBOX        "Список действий",IDC_STATIC,12,108,258,42
+    CONTROL         "Начинать список действий сначала после отмены",IDC_RESETALCB,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,126,185,10
+END
+
+IDD_HELP DIALOGEX 0, 0, 316, 225
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Помощь"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "ОК",IDOK,246,204,57,14
+    CONTROL         113,IDC_STATIC,"Static",SS_BITMAP,0,0,333,43
+    EDITTEXT        IDC_HELPEDIT,12,54,294,144,ES_MULTILINE | ES_READONLY | ES_WANTRETURN | WS_VSCROLL
+    LTEXT           "Статический",IDC_BUILD,12,207,139,8,WS_DISABLED
+    CONTROL         "<a>http://vk.com/multiboxer</a>",IDC_LINK,"SysLink",WS_TABSTOP,159,207,85,12
+END
+
+IDD_GETKEY DIALOGEX 0, 0, 202, 57
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Получить код клавиши"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Нажмите любую клавишу",IDC_STATIC,7,7,185,41
+    EDITTEXT        IDC_KEYEDIT,21,22,159,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SELECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 165
+        VERTGUIDE, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 146
+    END
+
+    IDD_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 339
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 185
+    END
+
+    IDD_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 218
+        HORZGUIDE, 214
+    END
+
+    IDD_GETKEY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 38
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CARTMAN             ICON                    "Cartman-normal.ico"
+IDI_CARTMANGRAYED       ICON                    "Cartman-grayed.ico"
+IDI_CLOCKARROW          ICON                    "clock--arrow.ico"
+IDI_CLOCK               ICON                    "clock.ico"
+IDI_DOC                 ICON                    "document.ico"
+IDI_MULTIDOC            ICON                    "multidocument.ico"
+IDI_MULTIDOCARROW       ICON                    "multidocument--arrow.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 0,16,1488,0
+ PRODUCTVERSION 0,16,1488,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x0L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041904b0"
+        BEGIN
+            VALUE "CompanyName", "stillllllllllllllllllllllllllllllllllllllllllllll Inc."
+            VALUE "FileDescription", """Ну вас на хрен, пацаны, я пошел домой!"" (c) Э.K."
+            VALUE "FileVersion", "0.16.1488.0"
+            VALUE "InternalName", "main"
+            VALUE "LegalCopyright", "(c) 2010, 2011, 2013 stillllllllllllllllllllllllllllllllllllllllllllll Inc."
+            VALUE "ProductName", "Мультибоксер"
+            VALUE "ProductVersion", "0.16.1488.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x419, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "logo.bmp"
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
